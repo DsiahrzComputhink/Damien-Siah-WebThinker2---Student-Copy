@@ -26,7 +26,7 @@
         <h1 class="text-center">Hello, World!</h1>
         <p class="text-center">22 September 2024 (inspect bruh)</p>
     </div>
-    <table class = "table table-bordered table-striped">
+    <!-- <table class = "table table-bordered table-striped">
         <thead>
             <tr>
                 <th>cmds</th>
@@ -55,30 +55,65 @@
                 <td>Removes a element at the start of a array</td>
             </tr>
         </tbody>
-    </table>
+    </table> -->
     <div>
         <h3>Order for fruits</h3>
-        <form>
+        <form id = "orderform">
             <div class = "row" >
                 <div class = "column" >
                     <label>Fruit</label>
-                    <select>
+                    <select class="form control">
                         <option>//append option here - me from last week</option>
                     </select>
                     <label>Quantity</label>
-                    <select>
-                        <option>//append a number thing</option>
-                    </select>
-                    
+                    <input type ="number" class = "form-control" id = "quantityInput" min = "1" placeholder="Enter Qnty">
+                    </div>
+                    <div class = "col-1 alisn-self-end">
+                        <button type = "submit" class = "btn btn-primary">Submit Order</button>
+                    </div>
                 </div>
             </div>
         </form>
     </div>
+    <div>
+        <h3>Invoice</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Fruit</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Total Price</th>
+                </tr>
+            </thead>
+            <tbody id = "invoiceTableBody">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan = "4" class="text-right">Grand Total</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
     <!-- End your HTML code here -->
     <script>
-        // let fruits = ["apple","orange","banana","pineapple"];
-        // let fruitprice = ["$0.80","$1.45","$2.85","$3.25"];
-        
+        let fruits = ["apple","orange","banana","pineapple","mango","grapes"];
+        let fruitprice = [0.80,1.45,2.85,3.25,1.50,2.00];
+
+        $('#orderform').submit(function(event) {
+            let fruit = $('#fruit').val();
+            let quantity = $('#quantityinput').val();
+            
+            if(quantity >0 && fruit!=null){
+                let unitprice = fruitPrice[fruits.indexOf(fruit)];
+                let totalprice = unitprice * quantity; 
+                
+                let invoiceflow = '<tr>' + 
+                '<td>' + ($(#invoiceTableBody tr))
+                }
+        )};
         // fruits.pop;
         // fruitprice.pop;
         // console.log(fruits);
