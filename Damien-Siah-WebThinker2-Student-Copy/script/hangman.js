@@ -32,6 +32,7 @@ const keyPress = (key) => {
         }
     }
 }
+
 const SubmitGuess = () =>
 {
     console.log(word);
@@ -45,4 +46,14 @@ const SubmitGuess = () =>
 
         alert('Please enter a valid letter')
     }
+}
+
+const newGame = () =>
+{
+    location.reload();
+}
+
+const endGame = () =>
+{
+    $
 }
